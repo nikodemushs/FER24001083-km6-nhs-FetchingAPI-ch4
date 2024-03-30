@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", "Inter", sans-serif;
+}
+
+.steamIcon {
+  &:hover {
+    path {
+      stroke: #077789;
+    }
+  }
+}
+
+.slider {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  height: 100%;
+  display: none; /* Initially hide all slides */
+  transition: opacity 3s ease; /* Add transition for smoother opacity change */
+}
+
+.slide.active {
+  display: block; /* Display the active slide */
+}
