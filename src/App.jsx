@@ -9,11 +9,14 @@ import Items from "./Items";
 import ItemDetail from "./ItemDetail";
 import { Home } from "./Home";
 
+import MovieSearch from "./searchMovie";
+import MoviePopular from "./popularMovies";
+
 export default function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <MovieSearch />,
     },
     {
       path: "/heroes",

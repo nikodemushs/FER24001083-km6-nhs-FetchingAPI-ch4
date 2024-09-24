@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const API_KEY = "60234f6ae15d81b2aa5b3f6b1cd6cccc";
+const API_KEY = "e922b4a86bc02579841797dd84fdc105";
 
 const MovieSearch = () => {
   const [query, setQuery] = useState("");
   const [movies, setMovies] = useState([]);
   const [selectLanguage, setSelectLanguage] = useState("");
-  const [selectPage, setSelectPage] = useState("");
+  const [selectPage, setSelectPage] = useState(1);
   const [selectYear, setSelectYear] = useState("");
   const [selectRegion, setSelectRegion] = useState("");
 
@@ -118,7 +118,7 @@ const MovieSearch = () => {
               </div>
               <h2 className="font-bold px-5">{movie.title}</h2>
               <h2>Release date : {movie.release_date}</h2>
-              <h2 className="p-4"> Release{movie.overview.slice(0, 150)}...</h2>
+              <h2 className="p-4"> {movie.overview.slice(0, 150)}...</h2>
             </div>
           ))}
         </div>
